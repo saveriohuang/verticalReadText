@@ -3,7 +3,8 @@
 <head>
   <title>讀文字檔直書顯示</title>
   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-
+  <!-- 補上 Font Awesome 圖標庫 -->
+  <link rel="stylesheet" href="cdnjs.cloudflare.com">
   <style>
 
     body {
@@ -17,7 +18,7 @@
     .wrapper {
       height: 22px;
       min-width: 50px;
-      width: 150px;
+      width: 100px;
       display: flex;
       align-items: center;
       justify-content:center;
@@ -32,7 +33,7 @@
       text-align: center;
       font-size: 18px;
       font-weight: 300;
-      font-family: 'Poppins', sans-serif;
+     
       cursor: pointer;
       user-select: none;
       color: black;
@@ -85,7 +86,7 @@
 
       </td>
       <td>
-        <label>&nbsp&nbsp<label>
+        <label>&nbsp&nbsp</label>
             <select name="pageHight" onchange="changeHeight(this.value)">
               <option value="">選擇頁高</option>
               <option value="100">100px</option>
@@ -101,7 +102,7 @@
       </td>
 
       <td>
-        <label>&nbsp&nbsp字大小<label>
+        <label>&nbsp&nbsp字大小</label>
             <select name="FoneHight" onchange="changeFoneSize(this.value)">
               <option value="12">8</option>
               <option value="14">10</option>
@@ -113,7 +114,7 @@
             </select>
       </td>
       <td>
-        <label>&nbsp&nbsp字型選擇<label>
+        <label>&nbsp&nbsp字型選擇</label>
             <select name="FomeFamily" onchange="changeFoneFamily(this.value)">
               <option value="新細明體">新細明體</option>
               <option value="標楷體">標楷體</option>
@@ -123,7 +124,7 @@
       <td>
          <input type="checkbox" id="bold" name="bold" onchange="changefontWeight(this.value)"/>粗體
       </td>
-      <td>    <label>&nbsp&nbsp行高<label>
+      <td>  <label>&nbsp&nbsp行高</label>
             <select name="pageHight" onchange="changeRowHeight(this.value)">
               <option value="20">20</option>
               <option value="22" selected="selected">22</option>
@@ -138,7 +139,7 @@
             </select>
       </td>
       <td>
-          <label>&nbsp&nbsp字距<label>
+          <label>&nbsp&nbsp字距</label>
             <select name="letterSpacing" onchange="changeletterSpacing(this.value)">
               <option value="2">2</option>
               <option value="3" selected="selected">3</option>
@@ -152,17 +153,17 @@
       <td>
         &nbsp&nbsp
         <label>文字顏色</label>
-        <input id="foneColorPick" type="color" value="#ffff00" onchange="changeFonecolor(this.value)" />
+        <input id="foneColorSet" type="color" value="#ffff00" onchange="changeFonecolor(this.value)" />
       </td>
       <td>
         &nbsp&nbsp
         <label>底色</label>
-        <input id="foneColorPick" type="color" value="#343F4F" onchange="changeBKgroundcolor(this.value)" />
+        <input id="backgroundColorPick" type="color" value="#343F4F" onchange="changeBKgroundcolor(this.value)" />
       </td>
       <!--<td>
         &nbsp&nbsp
         <label>底色透明度</label>
-        <input id="foneColorPick" type="range" value="50" onchange="changeBKopacity(this.value)" />
+        <input id="backGrndTrans" type="range" value="50" onchange="changeBKopacity(this.value)" />
       </td>-->
       <td>
         &nbsp&nbsp
@@ -181,7 +182,7 @@
         </div>
       </td>
     </tr>  
-    <tr>
+    
   </table>
   <div id="res" class="newspaper"></div>
   <script>
